@@ -4,6 +4,10 @@ import * as React from 'react';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
+import NotificationScreen from '../screens/NotificationScreen';
+import ExhibitionScreen from '../screens/ExhibitionScreen';
+import MerPayScreen from "../screens/MerPayScreen"
+import MyPageScreen from '../screens/MyPageScreen';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -25,10 +29,34 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Notification"
+        component={NotificationScreen}
         options={{
-          title: 'Resources',
+          title: 'お知らせ',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Exhibition"
+        component={ExhibitionScreen}
+        options={{
+          title: '出品',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="MerPay"
+        component={MerPayScreen}
+        options={{
+          title: 'メルペイ',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="MyPage"
+        component={MyPageScreen}
+        options={{
+          title: 'マイページ',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
@@ -44,5 +72,11 @@ function getHeaderTitle(route) {
       return 'How to get started';
     case 'Links':
       return 'Links to learn more';
+    case 'Notification':
+      return '通知';
+    case 'Exhibition':
+      return '出品';
+    case 'MyPage':
+      return 'マイページ';
   }
 }
