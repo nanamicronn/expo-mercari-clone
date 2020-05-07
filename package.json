@@ -33,14 +33,15 @@
     "react-native-reanimated": "~1.7.0",
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
-    "react-native-tab-view": "^2.14.0",
+    "react-native-tab-view": "file:../react-native-tab-view",
     "react-native-tab-view-viewpager-adapter": "^1.0.7",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0",
-    "jest-expo": "~37.0.0"
+    "jest-expo": "~37.0.0",
+    "patch-package": "^6.2.2"
   },
   "private": true
 }

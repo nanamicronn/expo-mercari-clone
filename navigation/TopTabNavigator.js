@@ -98,7 +98,7 @@ function MyTabBar({ state, descriptors, navigation, position }) {
 
 export default () => {
   return (
-    <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
+    <Tab.Navigator>
       <Tab.Screen name="Tab1" component={Tab1Screen} />
       <Tab.Screen name="Tab2" component={Tab2Screen} />
       <Tab.Screen name="Tab3" component={Tab3Screen} />
